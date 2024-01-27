@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'pstyle.css' %}">
+    <title>Portfolio</title>
+</head>
+<body>
+<h1 style="text-decoration: underline;">Welcome to my portfolio</h1>
+<h3 style="text-decoration: underline;">Skills</h3>
+{% for skill in skills %}
+<p>Skill Name:<span style="color: black; background: cyan"> {{skill.name_s}}</span></p>
+<p>Level: <span style="color: black; background: yellow;">{{skill.per}}%</span></p>
+{% endfor %}
+<p>.....................................................................................</p>
+<h3 style="text-decoration: underline;">Projects</h3>
+{% for project in projects %}
+<p>Project Name:<span style="color: black; background: cyan"> {{project.name_p}}</span></p>
+<p>Project Description:<span style="color: black; background: yellow"> {{project.dec}}</span></p>
+{% endfor %}
+</body>
+</html>

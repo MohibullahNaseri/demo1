@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'r.css' %}">
+</head>
+<body>
+<form action="register" method="post">
+    {% csrf_token %}
+    <div class="box_outer">
+        <div class="box_inner">
+            <div class="logo">Registration</div><br>
+            <input type="text" name="first_name" placeholder="First Name"><br>
+            <input type="text" name="last_name" placeholder="Last Name"><br>
+            <input type="text" name="username" placeholder="Username"><br>
+            <input type="email" name="email" placeholder="Email"><br>
+            <input type="password" name="password1" placeholder="Password"><br>
+            <input type="password" name="password2" placeholder="Confirm Password"><br><br>
+            <input type="submit" class="button">
+        </div>
+    </div>
+</form>
+
+{% for message in messages %}
+<div class="message">{{message}}</div>
+{% endfor %}
+
+</body>
+</html>

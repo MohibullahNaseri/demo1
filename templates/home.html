@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'hh.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+</head>
+<body>
+
+<ul>
+    <li><div class="name">Mohibullah Naseri</div></li>
+    <li><a href="portfolio/projects">About Me</a> </li>
+    <li><a href="#">Resume</a> </li>
+    <li><a href="portfolio/portfolio">Portfolio</a> </li>
+    <li><a href="#">Home</a> </li>
+    <div class="dropdown">
+        <i class="fa fa-caret-down"></i>
+        <div class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="portfolio/portfolio">Portfolio</a>
+            <a href="#">Resume</a>
+            <a href="portfolio/projects">About Me</a>
+        </div>
+    </div>
+
+</ul>
+<div class="container">
+    <div class="neu-1"><img class="img" src="{% static 'img.png' %}"></div>
+    <div class="neu-2 content">
+        <h1 style="text-align: center;">Software Engineer</h1>
+        <h3 style="text-align: center;">Web DEV | App DEV</h3>
+        <h4 style="padding:7% 10%">You customers! are one click away from your business
+        let me break down it by trending web and native apps
+        </h4>
+    </div>
+</div>
+
+<footer>
+    <div class="footer">
+        <a href="https://www.linkedin.com/company/linkedin/" class="fa fa-linkedin icon"></a>
+        <a href="accounts/Register" class="fa fa-twitter icon"></a>
+        <a href="https://www.facebook.com/profile.php?id=100072454957643&sk=about" class="fa fa-facebook icon"></a>
+        <a href="https://www.instagram.com/mohibullah.naseri2121/?hl=en" class="fa fa-instagram icon"></a>
+    </div>
+</footer>
+</body>
+</html>
